@@ -1,4 +1,4 @@
-const servicios = [
+const productos = [
   {
     id: 1,
     nombre: "El mundo de sofia",
@@ -42,28 +42,37 @@ const servicios = [
     id: 6,
     nombre: "La Gaya ciencia",
     categoria: "filosofia",
-    autor: "Nietzsche. filosofia",
+    autor: "Nietzsche ",
     precio: 1900,
     img: ".jpeg",
   },
-  { id: 7, nombre: "microblanding", precio: 5800, img: "microblanding.png" },
+  {
+    id: 7,
+    nombre: "",
+    categoria: "filosofia",
+    autor: "Nietzsche ",
+    precio: 1900,
+    img: ".jpeg",
+  },
   {
     id: 8,
-    nombre: "radiofrecuencia",
-    precio: 12800,
-    img: "radiofrecuencia.png",
+    nombre: "El cuervo",
+    precio: 800,
+    img: ".png",
   },
   {
     id: 9,
-    nombre: "micropigmentación",
-    precio: 7800,
-    img: "micropigmentacion.jpeg",
+    nombre: "",
+    categoria: "filosofia",
+    autor: "Nietzsche",
+    precio: 1900,
+    img: ".jpeg",
   },
   {
     id: 10,
     nombre: "Asi hablo zaratustra",
     categoria: "filosofia",
-    autor: "Nietzsche. filosofia",
+    autor: "Nietzsche",
     precio: 1900,
     img: ".jpeg",
   },
@@ -71,7 +80,7 @@ const servicios = [
     id: 11,
     nombre: "El anticristo",
     categoria: "filosofia",
-    autor: "Nietzsche. filosofia",
+    autor: "Nietzsche",
     precio: 2000,
     img: ".jpeg",
   },
@@ -79,7 +88,7 @@ const servicios = [
     id: 12,
     nombre: "Mas alla del bien y el mal",
     categoria: "filosofia",
-    autor: "Nietzsche. filosofia",
+    autor: "Nietzsche",
     precio: 1000,
     img: ".jpeg",
   },
@@ -87,7 +96,7 @@ const servicios = [
     id: 13,
     nombre: "De la muerte de Dios",
     categoria: "filosofia",
-    autor: "Nietzsche. filosofia",
+    autor: "Nietzsche",
     precio: 2000,
     img: ".jpeg",
   },
@@ -95,7 +104,7 @@ const servicios = [
     id: 14,
     nombre: "Ecce homo",
     categoria: "filosofia",
-    autor: "Nietzsche. filosofia",
+    autor: "Nietzsche",
     precio: 2000,
     img: ".jpeg",
   },
@@ -124,8 +133,8 @@ const servicios = [
     img: ".jpeg",
   },
 ];
-console.log(servicios);
-function servicio(id, nombre, categoria, autor, precio, img) {
+console.log(productos);
+function producto(id, nombre, categoria, autor, precio, img) {
   this.id = id;
   this.nombre = nombre;
   this.categoria = categoria;
@@ -133,10 +142,18 @@ function servicio(id, nombre, categoria, autor, precio, img) {
   this.precio = precio;
   this.img = img;
 }
-const nuevoServicio = new servicio(Apologia de Socrates, filosofia, platon, 2000, img.jpg)
-function cargarServicio(arr, valor) {
+
+const nuevoProducto = new producto(
+  "Apologia de Socrates",
+  "filosofia",
+  "platon",
+  2000,
+  "img.jpg"
+);
+function cargarProducto(arr, valor) {
   arr.push(valor);
 }
+cargarProducto(productos, nuevoProducto);
 
 // const almacenados = [];
 //    const formulario = document.querySelector("form"),
