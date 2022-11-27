@@ -133,7 +133,7 @@ const productos = [
     img: ".jpeg",
   },
 ];
-console.log(productos);
+// console.log(productos);
 function producto(id, nombre, categoria, autor, precio, img) {
   this.id = id;
   this.nombre = nombre;
@@ -148,67 +148,52 @@ const nuevoProducto = new producto(
   "filosofia",
   "platon",
   2000,
-  "img.jpg"
+  "img.jpg",
 );
 function cargarProducto(arr, valor) {
   arr.push(valor);
 }
+let filtrarPorPrecio = (arr, filtro) =>
+ arr.filter((producto) => producto.precio <= filtro);
+
+ function buscarProducto(arr, filtro) {
+  const encontrado = arr.find((producto) => {
+    return producto.nombre.includes(filtro);
+  });
+  return encontrado;
+}
+const compras = [];
+let calcularPrecio = compras.reduce((acc, el) => {
+  return acc + el.precio;
+}, 0);
+console.log(calcularPrecio);
+
 cargarProducto(productos, nuevoProducto);
+const formulario = document.querySelector("form"),
+checkbox = document.getElementById("check"),
+email = document.getElementById("email"),
+password = document.getElementById("password"),
+p = document.querySelector("p");
 
-// const almacenados = [];
-//    const formulario = document.querySelector("form"),
-//   checkbox = document.getElementById("check"),
-//   email = document.getElementById("email"),
-//   password = document.getElementById("password"),
-//   p = document.querySelector("p");
 
-//   function guardarLS(valor){
-//     let user={usuario:email.value, pass: password.value};
-//     if(user.usuario=="" || user.pass==""){
-//       p.innerText= "Todos los campos son requeridos";
-//       return;
-//     }else{
-//       if(valor=== "localStorage"){
-//         localStorage.setItem('item',JSON.stringify(user))
-//       }
-//       if(valor==="sessionStorage"){
-//         sessionStorage.setItem('item',JSON.stringify(user))
-//       }
-//     }
-//     return user
-//   }
-//Crear la funcion que traiga los datos
 
-// formulario.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   //CÓDIGO A EJECUTAR
-//   if(checkbox.checked){
-//     guardarLS("localStorage")++
-//   }else{
-//     guardarLS('sessionStorage')
-//   }
-
-// });
-
-//Setear claves y valores
-// localStorage.setItem('saludo', 'Hola tarola');
-// localStorage.setItem('numero', 1);
-// localStorage.setItem('esValido', true);
-
-//Traer los valores de Storage
-// let mensaje= localStorage.getItem('saludo');
-// let num= localStorage.getItem('numero');
-// let valido= localStorage.getItem('esValido');
-/* console.log(typeof mensaje);
-console.log(typeof num);
-console.log(typeof valido);
- */
-//sessionStorage
-// sessionStorage.setItem('email', "mail@mail.com")
-// sessionStorage.setItem('select', [1,2,3,4,5,6,7,8]);
-
-// let numeros= sessionStorage.getItem('select').split(',')
-//console.log(numeros);
+//  let contenedor = document.querySelector(".contenedor");
+//  function crearHtml(arr) {
+//    let html;
+//    arr.forEach((el) => {
+//  const {nombre, precio, img}= el
+ 
+//      html = ` <div class="card">
+//    <img src="./img/${img}" alt="">
+//    <hr>
+//    <h3>${nombre}</h3>
+//    <p>$${precio}</p>
+  
+//    </div>`;
+//      contenedor.innerHTML += html;
+//    });
+//  }
+//  crearHtml(servicios)
 
 //recorrer el storage
 // for (let i = 0; i < localStorage.length; i++) {
@@ -242,3 +227,16 @@ console.log(filtrado);
 const encontrado= encontrar(servicios, email.value)
 almacenados.push(encontrado)
 localStorage.setItem("fitrado", JSON.stringify(almacenados)) */
+
+const linkRegistro = document.getElementById('btnRegistro');
+// const btnConfirmar = document.getElementById('btnConfirmar');
+
+// const btn1 = document.getElementById('btn1');
+
+// console.log(btn1)
+
+// btnRegistrarse.onclick = () => console.log("btnRegistrarse")
+
+// linkRegistro.addEventListener('click', () => {
+//   btnConfirmar.value  = "Registrate";
+// });
