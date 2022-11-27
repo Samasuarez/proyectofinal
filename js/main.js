@@ -5,7 +5,7 @@ const productos = [
     categoria: "novela",
     autor: "Jostein Gaarder",
     precio: 1200,
-    img: "elMundoDeS.webp",
+    // img: "elMundoDeS.webp",
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ const productos = [
   },
   {
     id: 7,
-    nombre: "",
+    nombre: "Humano demasiado humano",
     categoria: "filosofia",
     autor: "Nietzsche ",
     precio: 1900,
@@ -62,7 +62,7 @@ const productos = [
   },
   {
     id: 9,
-    nombre: "",
+    nombre: "La geneologia de la moral",
     categoria: "filosofia",
     autor: "Nietzsche",
     precio: 1900,
@@ -148,15 +148,15 @@ const nuevoProducto = new producto(
   "filosofia",
   "platon",
   2000,
-  "img.jpg",
+  "img.jpg"
 );
 function cargarProducto(arr, valor) {
   arr.push(valor);
 }
 let filtrarPorPrecio = (arr, filtro) =>
- arr.filter((producto) => producto.precio <= filtro);
+  arr.filter((producto) => producto.precio <= filtro);
 
- function buscarProducto(arr, filtro) {
+function buscarProducto(arr, filtro) {
   const encontrado = arr.find((producto) => {
     return producto.nombre.includes(filtro);
   });
@@ -170,42 +170,45 @@ console.log(calcularPrecio);
 
 cargarProducto(productos, nuevoProducto);
 const formulario = document.querySelector("form"),
-checkbox = document.getElementById("check"),
-email = document.getElementById("email"),
-password = document.getElementById("password"),
-p = document.querySelector("p");
-
+  checkbox = document.getElementById("check"),
+  email = document.getElementById("email"),
+  password = document.getElementById("password"),
+  p = document.querySelector("p");
 
 let contenedor = document.querySelector(".contenedor");
 function crearHtml(arr) {
   let html;
   arr.forEach((el) => {
-const {nombre, precio, img}= el
+    const { nombre, precio, img } = el;
 
-    html = ` <div class="card2">
+    html = `
+  <div class="card2">
   <img src="./img/${img}" alt="">
   <hr>
   <h3>${nombre}</h3>
   <p>$${precio}</p>
+  <input id="btnComprar" type="submit" value= "comprar">
  
   </div>`;
     contenedor.innerHTML += html;
   });
 }
-crearHtml(productos)
+
+
+crearHtml(productos);
 
 //  let contenedor = document.querySelector(".contenedor");
 //  function crearHtml(arr) {
 //    let html;
 //    arr.forEach((el) => {
 //  const {nombre, precio, img}= el
- 
+
 //      html = ` <div class="card">
 //    <img src="./img/${img}" alt="">
 //    <hr>
 //    <h3>${nombre}</h3>
 //    <p>$${precio}</p>
-  
+
 //    </div>`;
 //      contenedor.innerHTML += html;
 //    });
@@ -245,7 +248,7 @@ const encontrado= encontrar(servicios, email.value)
 almacenados.push(encontrado)
 localStorage.setItem("fitrado", JSON.stringify(almacenados)) */
 
-const linkRegistro = document.getElementById('btnRegistro');
+const linkRegistro = document.getElementById("btnRegistro");
 // const btnConfirmar = document.getElementById('btnConfirmar');
 
 // const btn1 = document.getElementById('btn1');

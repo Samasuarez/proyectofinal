@@ -10,8 +10,25 @@ main {
   background-size: cover;
   border: none !important;
 }
-
-
+.flex{
+  display: flex;
+  justify-content: center;
+}
+.contenedor {
+  display: inline-grid;
+  grid-auto-columns: auto;
+  margin: 0 auto;
+  grid-template-areas: "card2 card2 card2 card2 card2  ";
+  /* display: flex;
+  flex-wrap: wrap;
+  margin: auto; */
+}
+.card2 {
+  margin: 10px;
+  /* background-color: red; */
+  width: 200px;
+  height: 350px;
+}
 .textoFormu {
   display: flex;
 }
