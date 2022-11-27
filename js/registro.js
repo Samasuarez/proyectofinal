@@ -3,7 +3,7 @@ nombre = document.querySelector("#nombre");
 usuarioReg = document.querySelector("#usuarioReg");
 emailReg = document.querySelector("#emailReg");
 passwordReg = document.querySelector("#passwordReg");
-btnRegister = document.querySelector("#registrarme");
+btn1 = document.querySelector("#registrarme");
 let usuarios;
 if (localStorage.getItem("usarios")) {
   usuarios = JSON.parse(localStorage.getItem("usuarios"));

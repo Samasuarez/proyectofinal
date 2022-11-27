@@ -10,6 +10,8 @@ main {
   background-size: cover;
   border: none !important;
 }
+
+
 .textoFormu {
   display: flex;
 }
@@ -25,7 +27,7 @@ form {
   width: 270px;
   border: 1px solid;
   padding: 20px;
-  background-color:rgb(47, 79, 79);
+  background-color: rgb(47, 79, 79);
   opacity: 0.6;
   border-radius: 8px;
   margin: calc(50vh - 220px);

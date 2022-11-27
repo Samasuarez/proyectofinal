@@ -5,7 +5,7 @@ const productos = [
     categoria: "novela",
     autor: "Jostein Gaarder",
     precio: 1200,
-    img: "ElMundoDs.jpg",
+    img: "elMundoDeS.webp",
   },
   {
     id: 2,
@@ -176,6 +176,23 @@ password = document.getElementById("password"),
 p = document.querySelector("p");
 
 
+let contenedor = document.querySelector(".contenedor");
+function crearHtml(arr) {
+  let html;
+  arr.forEach((el) => {
+const {nombre, precio, img}= el
+
+    html = ` <div class="card2">
+  <img src="./img/${img}" alt="">
+  <hr>
+  <h3>${nombre}</h3>
+  <p>$${precio}</p>
+ 
+  </div>`;
+    contenedor.innerHTML += html;
+  });
+}
+crearHtml(productos)
 
 //  let contenedor = document.querySelector(".contenedor");
 //  function crearHtml(arr) {
