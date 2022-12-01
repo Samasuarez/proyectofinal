@@ -14,6 +14,10 @@ main {
   display: flex;
   justify-content: center;
 }
+.btnComprar{
+display: flex;
+flex-direction: row;
+}
 .contenedor {
   display: inline-grid;
   grid-auto-columns: auto;

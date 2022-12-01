@@ -6,6 +6,7 @@ const productos = [
     autor: "Jostein Gaarder",
     precio: 1200,
     // img: "elMundoDeS.webp",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 2,
@@ -13,6 +14,7 @@ const productos = [
     categoria: "novela",
     precio: 2000,
     img: ".jpg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ const productos = [
     autor: "Jostein Gaarder",
     precio: 2000,
     img: ".jpg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 4,
@@ -29,6 +32,7 @@ const productos = [
     autor: "Arthur Golden",
     precio: 1500,
     img: ".webp",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 5,
@@ -37,6 +41,7 @@ const productos = [
     autor: "Santiago Posteguillo",
     precio: 1200,
     img: ".webp",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 6,
@@ -45,6 +50,7 @@ const productos = [
     autor: "Nietzsche ",
     precio: 1900,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 7,
@@ -53,12 +59,14 @@ const productos = [
     autor: "Nietzsche ",
     precio: 1900,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 8,
     nombre: "El cuervo",
     precio: 800,
     img: ".png",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 9,
@@ -67,6 +75,7 @@ const productos = [
     autor: "Nietzsche",
     precio: 1900,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 10,
@@ -75,6 +84,7 @@ const productos = [
     autor: "Nietzsche",
     precio: 1900,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 11,
@@ -83,6 +93,7 @@ const productos = [
     autor: "Nietzsche",
     precio: 2000,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 12,
@@ -91,6 +102,7 @@ const productos = [
     autor: "Nietzsche",
     precio: 1000,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 13,
@@ -99,6 +111,7 @@ const productos = [
     autor: "Nietzsche",
     precio: 2000,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 14,
@@ -107,6 +120,7 @@ const productos = [
     autor: "Nietzsche",
     precio: 2000,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 15,
@@ -115,6 +129,7 @@ const productos = [
     autor: "Jean paul sartre",
     precio: 2000,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
   },
   {
     id: 16,
@@ -123,6 +138,8 @@ const productos = [
     autor: "Jean paul sartre",
     precio: 2000,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
+
   },
   {
     id: 17,
@@ -131,6 +148,8 @@ const productos = [
     autor: "Jean paul sartre",
     precio: 2000,
     img: ".jpeg",
+    estado: "En proceso/Adquirido"
+
   },
 ];
 // console.log(productos);
@@ -187,15 +206,33 @@ function crearHtml(arr) {
   <hr>
   <h3>${nombre}</h3>
   <p>$${precio}</p>
-  <input id="btnComprar" type="submit" value= "comprar">
+  <div class="btnComprar"><input id="btnComprar" type="submit" value= "comprar"></div>
  
   </div>`;
     contenedor.innerHTML += html;
   });
 }
 
+function filtrado() {
+  let  search = document.getElementById('search')
+  search=search.toLowerCase();
+  const encontrado = arr.find((producto) => {
+    return producto.nombre.includes(filtro);
+  });
+  return encontrado;
+
+ 
+  // for (i = 0; i < x.length; i++) { 
+  //     if (!x[i].innerHTML.toLowerCase().includes(search)) {
+          
+  //     }
+  // }
+}
 
 crearHtml(productos);
+
+const comprar = document.querySelector("btnComprar")
+
 
 //  let contenedor = document.querySelector(".contenedor");
 //  function crearHtml(arr) {
