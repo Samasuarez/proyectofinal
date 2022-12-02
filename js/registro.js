@@ -56,9 +56,4 @@ form.addEventListener("submit", (e) => {
     guardarLS("sessionStorage");
   }
 });
-guardarLS()
-// console.log('button', button1)
-
-// button.addEventListener('click', (event) => {
-//   button.textContent = `Click count: ${event.detail}`;
-// });
+guardarLS();
