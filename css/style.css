@@ -10,26 +10,23 @@ main {
   background-size: cover;
   border: none !important;
 }
-.flex{
+.flex {
   display: flex;
   justify-content: center;
 }
-.btnComprar{
-display: flex;
-flex-direction: row;
+.btnComprar {
+  display: flex;
+  flex-direction: row;
 }
 .contenedor {
   display: inline-grid;
   grid-auto-columns: auto;
   margin: 0 auto;
   grid-template-areas: "card2 card2 card2 card2 card2  ";
-  /* display: flex;
-  flex-wrap: wrap;
-  margin: auto; */
 }
 .card2 {
   margin: 10px;
-  /* background-color: red; */
+
   width: 200px;
   height: 350px;
 }
@@ -55,7 +52,6 @@ form {
 }
 
 .card form input {
-  /* display: flex; */
   margin-top: 15px;
   font-size: 1.3rem;
 }
@@ -70,50 +66,3 @@ form {
   border-radius: 5px;
   border: 1px solid red;
 }
-
-.displayNone {
-  /* display: none; */
-}
-
-/* .gridIndex {
-  display: grid;
-  grid-template-areas:
-    "img form"
-    "img form" 
-    ;
-}
-element.style{
-  height: 100%;
-}
-img {
-  grid-area: img;
-  height: 100%;
-  
-}
-form{
-  grid-area:form;
-  margin: 0 auto;
-  width: 100%;
-  padding: 100px;
-  border: 1px solid #CCC;
-  border-radius: 2em;
-}
-.card  input {
-  margin-top: 0;
-  text-align: center;
-  font-size: 1.3rem;
-}
-.card-action {
-  max-width: 100%;
-}
-
-#mensaje {
-  font-style: italic;
-  font-size: 1.3rem;
-}
-.error {
-  color: red;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid red;
-} */
